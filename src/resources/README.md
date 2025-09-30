@@ -1,102 +1,76 @@
+## 1. What is JSX, and why is it used?
 
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-007
+**What is JSX:**  
+JSX (JavaScript XML) is an extension of JavaScript that looks like HTML but is actually JavaScript code. It’s mainly used in React. With JSX, we can easily build User Interfaces (UI). In short, JSX allows React developers to design UI using HTML-like syntax inside JavaScript.  
 
-### 📅 Deadline For 60 marks: 27th September, 2025 (11:59 pm ⏱️)
-
-### 📅 No Deadline For 50 marks 
-
-### 📅 Deadline For 30 marks: Any time after 27th September , 2025 (11:59pm⏱️).
-
----
-
-# Private Repository: https://classroom.github.com/a/VVl8VKya
-
-# Customer Support Zone
-
-This project is a React-based **Customer Support Zone** designed to display customer tickets, track progress, and mark them as resolved. It follows a Figma design and includes additional features like status management, responsiveness, and toast notifications using **React-Toastify**.
+**Why is it used?**
+- Makes UI code easier to write  
+- Lets you use JavaScript and HTML together  
+- Works smoothly with the React DOM  
+- Helps create reusable components  
+- Makes the code easier to read  
 
 ---
 
-## 📌 Features & Requirements 
+## 2. What is the difference between State and Props?
 
-### ✅ Navbar 
+In React, both **State** and **Props** are used for handling data, but they are not the same.  
 
-* Website name/logo on the **left**.
-* Menu items and **New Ticket** button on the **right**.
+- **Props** are used to pass data from one component to another.  
+- **State** is used to manage data inside a component itself.  
 
-### ✅ Banner
+**Key Differences:**
 
-* Banner section designed according to Figma.
-* Shows a **linear gradient** background.
-* Displays ticket statistics:
+### Props
+- Data is passed from parent to child components  
+- Immutable (cannot be changed)  
+- Can be used in both functional and class components  
+- Read-only  
 
-  * **In Progress Count**
-  * **Resolved Count** (default = 0).
-
-### ✅ Main Section
-
-1. **JSON Data **
-
-   * Created **10–15 tickets** with the following properties:
-
-     * `id`, `title`, `description`, `customer`, `priority`, `status`, `createdAt`.
-
-2. **Ticket Cards**
-
-   * Display all ticket information in a **card layout**.
-   * Cards arranged in a **2-column grid** (left side).
-
-3. **Task Status Section**
-
-   * Clicking a card adds it to the **Task Status Section** (right side) and shows alert. It will increase the count of in-progress in banner
-   * Task Status shows:
-
-     * Ticket Title
-     * **Complete Button**
-   * Clicking **Complete Button**:
-
-     * show alert
-     
-
-
-### ✅ Footer 
-
-* Designed according to Figma.
-
-### ✅ Responsiveness 
-
-* The entire website is **responsive** for mobile devices.
-
-### ✅ Readme: 
-Create a README file to answer the following question-
-
- - What is JSX, and why is it used?
- - What is the difference between State and Props?
- - What is the useState hook, and how does it work?
- - How can you share state between components in React?
- - How is event handling done in React?
+### State
+- Data is managed inside the component  
+- Mutable (can be changed)  
+- Can be both read and updated  
 
 ---
 
-### 
+## 3. What is the useState hook, and how does it work?
 
-## 📌 Challenge Requirements 
+**What is useState?**  
+`useState` is a React Hook that allows you to create and manage state in a functional component.  
 
-### 🔔 React-Toastify 
+**How does it work?**  
+It returns an array with two values:  
+1. The current state value  
+2. A function to update that state  
 
-* Used **React-Toastify** to replace all alerts with stylish toast notifications.
+**Syntax:**
+```javascript
+const [state, setState] = useState(initialValue);
 
-### 📝 Task Completion Logic 
 
-Clicking **Complete Button**:
 
-1. It is **removed from Task Status**. 
-2. It is added to the **Resolved List**. 
-3. The **In Progress count decreases**. 
-4. The **Resolved count increases**. 
-5. It is removed from the **Customer Tickets list**. 
 
+## 4. How can you share state between components in React?
+
+You can share state between components in two main ways:
+
+### 1. Using Props
+- Data is passed from parent to child via props  
+- Any type of data (objects, arrays, functions) can be passed  
+- Child components can only read props, not modify them  
+
+### 2. Lifting State Up
+- Keep the state in a parent component  
+- Pass the state and functions down to child components as props  
+- This allows child components to update the parent’s state through those functions  
 
 ---
+
+##5 How is event handling done in React?
+
+- Event handling in React is similar to HTML but uses **camelCase** syntax (e.g., `onClick` instead of `onclick`)  
+- we can pass a function reference as the event handler, not a string  
+- React uses its own **SyntheticEvent** system to ensure events work consistently across all browsers  
 
 
